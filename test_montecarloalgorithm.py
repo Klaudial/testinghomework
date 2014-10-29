@@ -3,3 +3,6 @@ from filefortest import MonteCarloAlgorithm
     
 def testnegtemp():
     with assert_raises(ValueError) as exception: MonteCarloAlgorithm(temperature=-1)
+    
+def testzerotemp():
+    with assert_raises(ValueError) as exception: MonteCarloAlgorithm(temperature=0)
