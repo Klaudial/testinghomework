@@ -10,3 +10,6 @@ def testzerotemp():
 def itertest():
     with assert_raises(ValueError) as exception: MonteCarloAlgorithm(iternumb=0)
     with assert_raises(ValueError) as exception: MonteCarloAlgorithm(iternumb=-1)
+    
+def functionnumbertest()
+    with assert_raises(TypeError) as exception: MonteCarloAlgorithm(functionnumber=1.5)

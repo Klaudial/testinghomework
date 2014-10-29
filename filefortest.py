@@ -24,7 +24,7 @@ class MonteCarloAlgorithm(object):
           #min and max particle number defined within our energy function
           #particlenumb=randint(minparticlenumb -1, maxparticlenumb)
           
-    def compare(energyend, energyinit)   
+    def compare(energyend, energyinit)
           if energyend < energyinit
             position=positionnew
             else p0 = exp-(energyend-energyinit)/temperature)
