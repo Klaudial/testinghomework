@@ -19,26 +19,29 @@ class MonteCarloAlgorithm(object):
           #it would be cool to have a file (e.g energyfunctions) which contains a number of energy functions indexed by "funcitonnumber"   
    
         
-    def moveparticle(self, energy)
-          from numpy.random import randint 
+   # def moveparticle(self)
+        #from numpy.random import randint 
           #min and max particle number defined within our energy function
-          particlenumb=randint(minparticlenumb -1, maxparticlenumb)
+          #particlenumb=randint(minparticlenumb -1, maxparticlenumb)
           
-     def compare     
-          if energynew < energy
+    def compare(energyend, energyinit)   
+          if energyend < energyinit
             position=positionnew
-            else p0 = exp(-(E1-E0)/temperature)
+            else p0 = exp-(energyend-energyinit)/temperature)
             p1=random.random()
                 if p0>p1
                     position=positionnew
 
     
-     for number in functionnumber:
+    for number in functionnumber:
+         if type(functionnumber) !=int:
+             raise TypeError("Function number should be an integer.")
         from energyfunctions import energy_"functionnumber"(density)
         
     def run(self, energy_"functionnumber", density)
         for number in iternumb
         #energy obtained from "energyfunctionnumber"
-        energyinit=energy
-        moveparticle
-        compare
+        energyinit=energy(density)
+        density=moveparticle
+        energyend=energy(density)
+        compare(energyinit, energyend)
