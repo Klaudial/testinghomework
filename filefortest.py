@@ -1,16 +1,11 @@
-def energy(density, coeff=1.0, temp):
-    
-    energysum = 0
-    density = [1.0, 1.0]
-    
-   
-    for value in density:
-        energyind = value
-        energyminus = value -1
-        energyprod = energyind*energyminus
+class MonteCarloAlgorithm(object):
 
-        energysum = (energysum + energyprod)
-    energysum = energysum*coeff/2
+    def __init__(self, temperature=295, iternumb=100):
     
-    print energysum
-    return energysum
+        if temperature<0:
+                raise ValueError("Work in Kelvin: no negative temperatures!")
+    
+    
+        self.temperature = temperature
+    
+        self.iternumb = iterations
