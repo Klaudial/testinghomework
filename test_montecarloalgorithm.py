@@ -7,9 +7,10 @@ def testnegtemp():
 def testzerotemp():
     with assert_raises(ValueError) as exception: MonteCarloAlgorithm(temperature=0)
     
-def itertest():
+def testiter():
     with assert_raises(ValueError) as exception: MonteCarloAlgorithm(iternumb=0)
     with assert_raises(ValueError) as exception: MonteCarloAlgorithm(iternumb=-1)
+    with assert_raises(TypeError) as exception: MonteCarloAlgorithm(iternumb= 0.7)
     
 #def functionnumbertest()
    # with assert_raises(TypeError) as exception: MonteCarloAlgorithm(functionnumber=1.5)

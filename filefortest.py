@@ -11,6 +11,9 @@ class MonteCarloAlgorithm(object):
                 
         if iternumb<=0:
                 raise ValueError("Can't have zero or fewer iterations!")
+        
+        if iternumb != int:
+                raise TypeError("Number of iterations must be an integer!") 
                 
         self.temperature = temperature
     
