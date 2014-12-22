@@ -1,8 +1,9 @@
 #initialise stuff
 class MonteCarloAlgorithm(object):
 #default temperature is standard lab temperature in Kelvin
+    #def __init__(self, temperature=295, iternumb=100):
     def __init__(self, temperature=295, iternumb=100):
-    
+        
         if temperature<0:
                 raise ValueError("Work in Kelvin: no negative temperatures!")
     
@@ -21,7 +22,12 @@ class MonteCarloAlgorithm(object):
         
           #it would be cool to have a file (e.g energyfunctions) which contains a number of energy functions indexed by "funcitonnumber"   
    
-        
+    def newtemperature(customtemp):
+        if customtemp == False:
+            newtemperaturevalue = 295
+        else:
+            newtemperaturevalue = input("Enter temperature: ")
+            
     def moveparticle(self):
         from numpy.random import randint 
           #min and max particle number defined within our energy function
@@ -42,7 +48,7 @@ class MonteCarloAlgorithm(object):
     #         raise TypeError("Function number should be an integer.")
      #    from energyfunctions import energy_"functionnumber"(density):
         
-    def run(self, energy_, density):
+    def run(self, energy, density):
         for number in iternumb:
         #energy obtained from "energyfunctionnumber"
             energyinit=energy(density)
